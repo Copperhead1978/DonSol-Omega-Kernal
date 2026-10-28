@@ -27,6 +27,7 @@ def validate(root: Path) -> list[str]:
     require(manifest.get("schema_version") == 1, "Unsupported manifest schema")
     edition = manifest.get("edition")
     require(edition == "2026.10.28", "Unexpected repository edition")
+    require(manifest.get("revision") == 2, "Unexpected repository revision")
     try:
         require((root / "VERSION").read_text().strip() == edition, "VERSION differs from manifest")
     except OSError:
@@ -49,6 +50,30 @@ def validate(root: Path) -> list[str]:
     for component in components:
         require(bool(component.get("version")), f"Missing version: {component.get('id')}")
         checked_path(component.get("path", ""))
+
+    capability_path = checked_path(manifest.get("capability_register", ""))
+    if capability_path:
+        try:
+            register = json.loads(capability_path.read_text(encoding="utf-8"))
+            require(register.get("schema_version") == 1, "Unsupported capability register schema")
+            require(register.get("edition") == edition and register.get("revision") == manifest.get("revision"),
+                    "Capability register edition/revision differs")
+            capabilities = register.get("capabilities", [])
+            require(bool(capabilities), "No capabilities declared")
+            require(len({c["id"] for c in capabilities}) == len(capabilities), "Duplicate capability ID")
+            for capability in capabilities:
+                require(capability.get("status") in {"documented", "implemented_local", "proposed"},
+                        f"Invalid capability status: {capability.get('id')}")
+                checked_path(capability.get("artifact", ""))
+                required = capability.get("required_tools")
+                require(isinstance(required, list) and all(isinstance(t, str) and t for t in required),
+                        f"Invalid required tools: {capability.get('id')}")
+            statuses = {c["id"]: c["status"] for c in capabilities}
+            require(statuses.get("local-preflight") == "implemented_local", "Local preflight status drift")
+            for cid in ("workflow-runner", "runtime-broker", "evaluation-harness", "retrieval-service", "dependency-service", "operator-interface"):
+                require(statuses.get(cid) == "proposed", f"Unsupplied service status drift: {cid}")
+        except (OSError, ValueError, TypeError, KeyError, AttributeError) as exc:
+            errors.append(f"Cannot validate capability register: {exc}")
 
     exports = manifest.get("source_exports", [])
     require(len(exports) == 4, "Expected four complete recovered text exports")
@@ -129,5 +154,5 @@ if __name__ == "__main__":
         for problem in problems:
             print(f"FAIL: {problem}", file=sys.stderr)
         sys.exit(1)
-    print("PASS: versions, source export hashes/sizes, local links, instruction limits, profiles, coverage, and conflicts")
+    print("PASS: versions, source hashes/sizes, links, instruction limits, profiles, coverage, conflicts, and capability register")
     print("Scope: local repository integrity only; no model, scientific, external-link, or playback validation")
