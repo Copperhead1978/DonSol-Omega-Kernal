@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "repository": "Copperhead1978/DonSol-Omega-Kernal",
+  "edition": "2026.10.28",
+  "prepared_date": "2026-10-28",
+  "superseded_head": "731d670fab22e5d839dc35a1bb1e52c004dd4e88",
+  "release_kind": "project_instruction_mirror",
+  "instructions": {
+    "full": "instructions/current-v9.1.md",
+    "compact": "instructions/current-v9.1-compact.txt",
+    "light": "instructions/light-boot.txt",
+    "compact_max_characters": 4000
+  },
+  "components": [
+    {
+      "id": "omega-kernel",
+      "version": "2.2 LOCKFRAME",
+      "path": "docs/kernel-and-architecture.md",
+      "status": "identity_recovered_standalone_implementation_unavailable"
+    },
+    {
+      "id": "cathedral-technical-reference",
+      "version": "8.1-scaffold",
+      "path": "sources/metadon-cathedral-spec-v8.1.md",
+      "status": "source_reference_with_original_open_fields"
+    },
+    {
+      "id": "ignition-key",
+      "version": "1.0",
+      "path": "sources/ignition-key-v1.0.md",
+      "status": "complete_recovered_source"
+    },
+    {
+      "id": "working-boot",
+      "version": "9.0",
+      "path": "sources/full-boot-v9.0.md",
+      "status": "source_bundle_with_internal_differences"
+    },
+    {
+      "id": "printable-field",
+      "version": "9.1",
+      "path": "sources/metadon-cathedral-field-v9.1.txt",
+      "status": "historical_session_specific_text_export"
+    },
+    {
+      "id": "current-instructions",
+      "version": "9.1 / 2026.10.28 compilation",
+      "path": "instructions/current-v9.1.md",
+      "status": "compiled_not_verbatim_transcript"
+    },
+    {
+      "id": "science-desk",
+      "version": "method recovered through 2026-10-26",
+      "path": "docs/science-desk.md",
+      "status": "non_sensitive_public_workflow_summary"
+    },
+    {
+      "id": "gauge-master",
+      "version": "September 4 method with later recorded-media boundary",
+      "path": "docs/gauge-master.md",
+      "status": "method_contract_exact_fixture_unavailable"
+    }
+  ],
+  "tag_profiles": {
+    "current-v9.1": {
+      "T": "observed_or_experimentally_demonstrated",
+      "V": "verified_by_named_traceable_source",
+      "I": "inference_from_T_or_V",
+      "P": "provisional_hypothesis_or_proposal",
+      "F": "falsified",
+      "UNKNOWN": "unresolved_or_insufficient_evidence"
+    },
+    "ignition-v1.0": {
+      "T": "verified_truth",
+      "I": "inference",
+      "V": "to_verify",
+      "P": "proposal"
+    },
+    "working-boot-v9.0": {
+      "T": "established_in_record",
+      "I": "inference",
+      "V": "verifiable_not_yet_checked",
+      "P": "speculative",
+      "F": "falsified",
+      "UNKNOWN": "unknown"
+    },
+    "field-v9.1-20260830": {
+      "T": "directly_established_in_working_record",
+      "V": "externally_verified_or_reference_supported",
+      "I": "logical_inference",
+      "P": "proposed_design_or_parameter",
+      "F": "falsifiable_assumption_or_model",
+      "UNKNOWN": "unknown"
+    },
+    "science-desk": {
+      "T": "tested_observed_or_documented",
+      "I": "inference",
+      "H": "hypothesis",
+      "U": "unknown"
+    }
+  },
+  "coverage": {
+    "complete_october_transcript": "not_recovered",
+    "runtime_implementation": "not_supplied",
+    "standalone_ignition_v1_1": "not_recovered",
+    "amplifier_laws_exact_wording": "summary_only",
+    "prebuild_procedure_exact_file": "not_recovered",
+    "september_4_fixture": "complete_original_not_recovered",
+    "master_registry_internals": "partial_or_unknown",
+    "scientific_source_claims": "historical_not_independently_reverified_in_this_refresh",
+    "private_records": "excluded"
+  },
+  "source_exports": [
+    {
+      "path": "sources/metadon-cathedral-spec-v8.1.md",
+      "version": "8.1-scaffold",
+      "handling": "complete_text_export",
+      "size_bytes": 48367,
+      "sha256": "9f16c25e26334db1ce013afa2d4f522379355872259d1fbf203d6f9855ca5c53"
+    },
+    {
+      "path": "sources/ignition-key-v1.0.md",
+      "version": "1.0",
+      "handling": "complete_text_export",
+      "size_bytes": 4209,
+      "sha256": "5e5dff60211a6087f8d36bfa7b053a832b795b9c9bc17f542b5f2dd505d4676b"
+    },
+    {
+      "path": "sources/full-boot-v9.0.md",
+      "version": "9.0",
+      "handling": "complete_text_export_of_source_bundle",
+      "size_bytes": 16128,
+      "sha256": "8c45f529b72e9d037f9bd0233478a28ecf798f83e83f2b6c91215ff78495c710"
+    },
+    {
+      "path": "sources/metadon-cathedral-field-v9.1.txt",
+      "version": "9.1",
+      "handling": "all_four_pages_text_export",
+      "size_bytes": 6128,
+      "sha256": "7bc76f196a274aba607831a2b4b9f3b07641f05ada73e595a565c686d1fc45ef"
+    }
+  ],
+  "open_conflicts": [
+    "C-001",
+    "C-002",
+    "C-003",
+    "C-004",
+    "C-005",
+    "C-006",
+    "C-007",
+    "C-008",
+    "C-009",
+    "C-010",
+    "C-011",
+    "C-012",
+    "C-013"
+  ],
+  "removed_baseline_paths": [
+    "docs/Launch_Doctrine_Package/DonSol_dashboard.html.pdf",
+    "docs/Launch_Doctrine_Package/execution_matrix.md",
+    "docs/Pitch_Deck_v1.1.pdf - Google Slides.mhtml",
+    "docs/Verification_Materials/benchmark/mock_pilots.py",
+    "docs/Verification_Materials/benchmark/tasks/task_01_memory_retention.py",
+    "docs/Verification_Materials/benchmark/tasks/task_02_code_synthesis.py",
+    "docs/Verification_Materials/benchmark_report.txt",
+    "docs/Verification_Materials/capcut_commercial_script.md",
+    "docs/Verification_Materials/verified_metrics.md",
+    "docs/White_Paper_v1.0.pdf",
+    "docs/benchmark_report.json",
+    "docs/pitch_deck.md",
+    "docs/press_sheets.md"
+  ],
+  "verification_scope": [
+    "local_document_links",
+    "source_export_hashes_and_sizes",
+    "component_versions",
+    "tag_profiles",
+    "instruction_length",
+    "source_coverage",
+    "conflict_register"
+  ],
+  "performance_validation": "no_empirical_model_comparison_established"
+}
