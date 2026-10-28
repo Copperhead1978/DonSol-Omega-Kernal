@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026.10.28 revision 2 — Capability map and local job preflight
+
+At the Operator's request to explain and incorporate the engine's abilities and expansion paths:
+
+- Added a machine-readable register distinguishing documented methods, supplied local code and proposed services. Session tool availability remains an actual observation, not a registry promise.
+- Added a standard-library local job-packet inspector and behavior tests covering tool prerequisites, target-bound authorization records, decision ancestry, unsettled inputs and malformed records. It runs no job and authenticates neither sources nor permissions.
+- Added an explicitly unexecuted planning example and a detailed abilities, connections and controlled-evolution guide, with acceptance conditions for future retrieval, dependency, workflow, broker, evaluation and interface builds.
+- Incorporated capability discovery and bounded propose/build/test/adopt steps into the full and compact boots. Kept current v9.1/component identities and original source exports unchanged.
+- Recorded the source and limits of this newly authored amendment. Earlier prototype reports remain unverified retrieval leads; no complete runtime or empirical model-performance result is claimed.
+
 ## 2026.10.28 — Current instruction mirror and repository replacement
 
 Replaces the active November 2025 v1.1 materials with the current DonSol Ω-Kernel / Metadon Cathedral instruction collection at the Operator's request.

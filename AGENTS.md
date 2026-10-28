@@ -14,5 +14,6 @@ Read [the current operating instructions](instructions/current-v9.1.md), [source
 - Reuse completed work and fix the defective component. Do not add charges, subscriptions, schedules, destinations, infrastructure changes, or publication authority through a documentation edit.
 - Do not commit credentials, private correspondence, financial details, account inventories, private receipts, personal handovers, signed URLs, or unrelated unpublished works. This repository is public.
 - Run `python3 tools/validate_repository.py` after changes. Update `manifest.json`, `CHANGELOG.md`, and source hashes when applicable. The checker is document validation, not a model benchmark.
+- Read `docs/capabilities-and-evolution.md` for extensions. Keep documented methods, supplied code, session availability and proposals distinct. For changes to preflight behavior, run `python3 -m unittest discover -s tools -p 'test_*.py'`. Its result does not authenticate authority, verify sources, execute jobs or resolve the open v8.1 cascade rules.
 
 Use direct, humane prose. Keep technical terms where they improve precision. If reality contradicts the model, the model changes.

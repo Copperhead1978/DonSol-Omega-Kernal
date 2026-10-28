@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "job_id": "EXAMPLE-LOCAL-REVIEW",
+  "goal": "Illustrate a local documentation review; this packet records no real execution.",
+  "phase": "plan",
+  "capability_ids": ["evidence-audit", "engineering-artifacts"],
+  "environment": {
+    "observed_at": "UNKNOWN",
+    "tools": {}
+  },
+  "action": {
+    "kind": "local_write",
+    "target": "example-review.md"
+  },
+  "authorization": {
+    "granted": false,
+    "action_kind": "local_write",
+    "target": "example-review.md",
+    "basis": "Illustration only; no actual task authorization is asserted."
+  },
+  "claims": [
+    {"id": "EXAMPLE-CLAIM", "tag": "UNKNOWN", "state": "active", "basis": "", "depends_on": []}
+  ],
+  "decision_inputs": [],
+  "acceptance_criteria": ["Every proposed correction names its source and affected document."],
+  "verification_plan": "Inspect the resulting diff, check source meaning, and run repository integrity checks.",
+  "recovery_plan": "Keep the previous document revision and revert the bounded edit if it fails review."
+}

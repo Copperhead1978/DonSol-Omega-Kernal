@@ -33,6 +33,10 @@ The July bundle's microtubule literature assertions and the technical reference'
 
 ## Public/private boundary
 
+Revision 2 is a new engineering amendment under the Operator's October 28 request to explain and incorporate the engine's abilities, connections and expansion possibilities. Its capability register, job-packet schema, local preflight code, tests and evolution guide are newly authored implementation/design artifacts, not recovered master canon. A targeted search did not recover the implementations described in earlier prototype conversations; reported prototype results are not adopted as verified results. The four original source exports remain unchanged.
+
+The amendment adds only a local record-inspection helper, not the missing complete v2.2 runtime. Its explicit-ancestry check supplies no numeric T-scale ordering, state-mutation cascade or resolution of C-003. Future integration and efficacy claims still require their own observed artifacts and evaluations.
+
 This is a public project instruction mirror. It excludes private correspondence, personal finances and family details, account inventories, access credentials, private file identifiers/paths, private receipts, signed upload URLs, unpublished manuscripts, and unrelated private records. No hidden platform or provider instructions are part of this project mirror.
 
 ## Replacement and history

@@ -2,9 +2,12 @@
   "schema_version": 1,
   "repository": "Copperhead1978/DonSol-Omega-Kernal",
   "edition": "2026.10.28",
+  "revision": 2,
+  "revision_base_commit": "877f7f4a808416d2ef4bd01cbc82f47b9f54f3c4",
   "prepared_date": "2026-10-28",
   "superseded_head": "731d670fab22e5d839dc35a1bb1e52c004dd4e88",
-  "release_kind": "project_instruction_mirror",
+  "release_kind": "project_instruction_mirror_with_local_preflight",
+  "capability_register": "capabilities.json",
   "instructions": {
     "full": "instructions/current-v9.1.md",
     "compact": "instructions/current-v9.1-compact.txt",
@@ -44,9 +47,21 @@
     },
     {
       "id": "current-instructions",
-      "version": "9.1 / 2026.10.28 compilation",
+      "version": "9.1 / 2026.10.28 revision 2 compilation",
       "path": "instructions/current-v9.1.md",
       "status": "compiled_not_verbatim_transcript"
+    },
+    {
+      "id": "local-preflight",
+      "version": "1.0",
+      "path": "tools/omega_preflight.py",
+      "status": "local_record_inspector_not_executor_or_authentication"
+    },
+    {
+      "id": "capability-register",
+      "version": "1.0",
+      "path": "capabilities.json",
+      "status": "dated_capability_and_expansion_contract"
     },
     {
       "id": "science-desk",
@@ -102,6 +117,8 @@
   "coverage": {
     "complete_october_transcript": "not_recovered",
     "runtime_implementation": "not_supplied",
+    "local_preflight": "supplied_limited_to_declared_job_record_checks",
+    "earlier_prototypes": "conversation_reports_not_recovered_as_implementation_artifacts",
     "standalone_ignition_v1_1": "not_recovered",
     "amplifier_laws_exact_wording": "summary_only",
     "prebuild_procedure_exact_file": "not_recovered",
@@ -177,7 +194,8 @@
     "tag_profiles",
     "instruction_length",
     "source_coverage",
-    "conflict_register"
+    "conflict_register",
+    "capability_register_consistency"
   ],
   "performance_validation": "no_empirical_model_comparison_established"
 }

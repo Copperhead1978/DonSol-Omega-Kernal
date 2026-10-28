@@ -39,6 +39,8 @@ In engineering, preserve explicit dimensions, units, coordinate frames, material
 
 ## Close and resume
 
+For a job requiring explicit machine-readable prerequisites, use the [job-packet example](../examples/job-packet.json) and [local preflight/evolution guide](capabilities-and-evolution.md). Keep real job records private. The inspector checks declared records and executes no action. Record a tool's actual observed binding and limits; do not infer availability from its mention in the capability register.
+
 Use the [handoff template](../examples/session-handoff.md). Preserve source references, actual artifact identities, changes, corrections, confirmed outcomes, held decisions, unknowns, and the next action. The next session resumes from that record and verifies changeable external state when necessary.
 
 Keep personal and operationally sensitive state outside this public repository. A blank template carries no private session state and claims no completed work.
