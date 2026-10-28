@@ -1,6 +1,6 @@
 # DonSol Ω-Kernel · Metadon Cathedral
 
-**Current repository edition: 2026.10.28 · Operator: Donald Wilson / Don Sol**
+**Current repository edition: 2026.10.28 · revision 2 · Operator: Donald Wilson / Don Sol**
 
 A practical framework for using AI with evidence, explicit uncertainty, human judgment, and a record of what actually happened. The Cathedral organizes attention and work; the Ω-Kernel keeps the work accountable to reality.
 
@@ -15,6 +15,15 @@ This edition replaces the November 2025 v1.1 release throughout the active repos
 3. Use the [command and session guide](docs/operating-guide.md). Save a handoff when the work ends.
 
 For a small instruction field, use the [compact boot, at most 4,000 characters](instructions/current-v9.1-compact.txt). A [light boot](instructions/light-boot.txt) is also available. These are dated compilations for this repository, not verbatim copies of an unavailable conversation transcript or a newly ratified Cathedral v9.2.
+
+Read [capabilities, connections, and controlled evolution](docs/capabilities-and-evolution.md) for what the engine supports now, what depends on connected tools, and what remains a proposed build. Revision 2 adds a [capability register](capabilities.json) and an executable local preflight for declared job records:
+
+```sh
+python3 tools/omega_preflight.py examples/job-packet.json
+python3 -m unittest discover -s tools -p 'test_*.py'
+```
+
+The example returns `PLAN_ONLY`. Preflight checks record consistency and missing prerequisites; it performs no action, authenticates no authority, and proves no source true. Both local tools use Python 3.10 or later and require no third-party packages.
 
 ## The system
 
@@ -45,13 +54,15 @@ Continuity lives in saved artifacts and ledgers. A prompt does not add model wei
 | [Source provenance](docs/provenance.md) | What was recovered, exported, compiled, and left private |
 | [Full recovered source texts](sources/README.md) | v8.1 specification, v9.0 boot, v9.1 field document, Ignition Key |
 | [Handoff example](examples/session-handoff.md) | A blank, reusable continuity template |
+| [Capabilities and evolution](docs/capabilities-and-evolution.md) | Working abilities, integration boundaries, job packets and expansion acceptance tests |
+| [Capability register](capabilities.json) | Documented methods, supplied local code, proposed services and tool requirements |
 | [Contributor instructions](AGENTS.md) | Rules for future repository work |
 
 ## Verification status
 
 The former v1.1 benchmark code assigned outcomes through mock identity and canned responses. Its reports, performance percentages, promotional documents, and broken run instructions have been removed from the active tree. They do not support an empirical performance claim for this edition. Git history retains the prior revision for provenance.
 
-This repository contains instructions and source documents. It does not claim a deployed kernel runtime, completed knowledge database, autonomous editorial service, or a successful controlled comparison of real models. [Evaluation requirements](docs/evaluation.md) distinguish a reproducible future evaluation from document integrity checks.
+This repository contains instructions, source documents, a local integrity checker and a local job-packet inspector. It does not claim a complete or deployed kernel runtime, completed knowledge database, autonomous editorial service, or a successful controlled comparison of real models. [Evaluation requirements](docs/evaluation.md) distinguish a reproducible future evaluation from document integrity checks and local program behavior tests.
 
 Run the local integrity check with Python's standard library:
 

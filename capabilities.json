@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "edition": "2026.10.28",
+  "revision": 2,
+  "status_meanings": {
+    "documented": "A procedure is supplied; this is not an installed service or proof of efficacy.",
+    "implemented_local": "Local code is supplied; tests have only their stated scope.",
+    "proposed": "An expansion direction, not an executable capability in this repository."
+  },
+  "capabilities": [
+    {"id": "evidence-audit", "status": "documented", "artifact": "docs/evidence-and-omega-gate.md", "required_tools": []},
+    {"id": "portable-boot", "status": "documented", "artifact": "instructions/current-v9.1.md", "required_tools": []},
+    {"id": "saved-continuity", "status": "documented", "artifact": "examples/session-handoff.md", "required_tools": ["artifact_store"]},
+    {"id": "source-research", "status": "documented", "artifact": "docs/science-desk.md", "required_tools": ["source_retrieval"]},
+    {"id": "engineering-artifacts", "status": "documented", "artifact": "docs/operating-guide.md", "required_tools": ["artifact_editing", "local_execution"]},
+    {"id": "repository-update", "status": "documented", "artifact": "AGENTS.md", "required_tools": ["repository_read", "repository_write"]},
+    {"id": "science-package", "status": "documented", "artifact": "docs/science-desk.md", "required_tools": ["source_retrieval", "artifact_editing", "media_production"]},
+    {"id": "publication-verification", "status": "documented", "artifact": "docs/science-desk.md", "required_tools": ["publication_write", "public_readback", "media_playback"]},
+    {"id": "narrative-work", "status": "documented", "artifact": "docs/arc-and-narrative.md", "required_tools": ["artifact_editing"]},
+    {"id": "local-preflight", "status": "implemented_local", "artifact": "tools/omega_preflight.py", "required_tools": ["local_execution"]},
+    {"id": "retrieval-service", "status": "proposed", "artifact": "docs/capabilities-and-evolution.md", "required_tools": []},
+    {"id": "dependency-service", "status": "proposed", "artifact": "docs/capabilities-and-evolution.md", "required_tools": []},
+    {"id": "workflow-runner", "status": "proposed", "artifact": "docs/capabilities-and-evolution.md", "required_tools": []},
+    {"id": "runtime-broker", "status": "proposed", "artifact": "docs/capabilities-and-evolution.md", "required_tools": []},
+    {"id": "evaluation-harness", "status": "proposed", "artifact": "docs/evaluation.md", "required_tools": []},
+    {"id": "operator-interface", "status": "proposed", "artifact": "docs/capabilities-and-evolution.md", "required_tools": []}
+  ]
+}
