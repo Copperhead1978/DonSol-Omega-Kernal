@@ -1,0 +1,32 @@
+# Runs the repository's own integrity checks on every proposed change.
+# Scope: the declared structural checks in tools/ only. This workflow does
+# not grade model performance and does not judge the truth of any content.
+name: Validate engine
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Repository validator + preflight tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the proposed revision
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run repository validator
+        run: python tools/validate_repository.py
+
+      - name: Run preflight behavior tests
+        run: python -m unittest discover -s tools -p 'test_*.py' -v
