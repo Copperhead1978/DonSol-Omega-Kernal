@@ -10,7 +10,7 @@ The [current boot](../instructions/current-v9.1.md) uses the October v9.1 profil
 | Ignition Key v1.0 | Verified truth | To verify, unchecked | Inference | Proposal/speculation | Not defined | Express uncertainty conservatively |
 | Working Boot v9.0 | Established/sourced in that record | Verifiable, not yet checked | Inference | Speculative | Falsified | UNKNOWN |
 | August v9.1 field document | Directly established in working record | Externally verified/reference supported | Logical inference | Proposed design/parameter | Falsifiable assumption/model | [UNKNOWN] |
-| Science Desk reporting | Tested/observed/documented | Not used | Inference | Not the reporting label for a hypothesis | Not the reporting label for an unknown | [H] hypothesis; [U] unknown |
+| Science Desk reporting | Tested/observed/documented | Not used | Inference | Not used — hypothesis is [H] | Not used — unknown is [U] | [H] hypothesis; [U] unknown |
 
 These are incompatible vocabularies in places, not a single ladder. In particular, do not turn an old unchecked [V] into a current verified [V], or an August [F] assumption into a current falsified claim. The original assertion and its actual evidence must be reviewed first.
 
