@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-10-29 — Operator rulings recorded; lens definitions amendment; full license text
+
+At the Operator's ruling on 2026-10-29, following an independent audit of this edition. The repository edition and revision labels (2026.10.28, revision 2) are unchanged; this entry records governance decisions and documentation repairs within that edition.
+
+- **Precedence ratified.** The Operator ratified the conflict register's precedence rule: the v9.1 compilation governs current operating behavior, with the v8.1 master specification as its source. The ratification is recorded in `docs/versions-and-conflicts.md`.
+- **Rulings recorded in the conflict register.** [V] is kept in the current profile as "verified by a named, traceable source" (C-001 closed as a decision). The T5 inversion is confirmed intentional — T5 is the top grade (that element of C-003 decided; the numeric inheritance inequality and DIRTY propagation elements of C-003 were not ruled on and remain open). The six code-name lenses are confirmed as the roster (C-005 closed as a roster decision). The [H]/[U] fold is confirmed — [P] carries hypothesis and UNKNOWN carries unknown in the framework profile, while the Science Desk profile retains [H]/[U] — and is registered as C-014, decided at registration. The manifest's open-conflict list and the repository checker's register-coverage count are updated to match (11 open entries).
+- **Lens definitions amendment added.** `docs/lens-definitions-amendment-2026-10-29.md` supplies the adopted current-edition definitions for FIELDSMITH and BRIDGENODE and is registered as a manifest component and linked from `docs/kernel-and-architecture.md`. The v8.1 source entries remain [FILL]; no source export was altered.
+- **License completed.** `LICENSE.md` now carries the full Creative Commons Attribution–NonCommercial 4.0 International legal text under the existing attribution header, replacing the summary notice, so the license is machine-readable.
+- **Wording repair.** The Science Desk row of the tag-profile table in `docs/evidence-and-omega-gate.md` now states the [P]/[F] cells plainly ("Not used — hypothesis is [H]"; "Not used — unknown is [U]"). No meaning changed.
+
+This entry changes project documentation and records the Operator's governance rulings. It does not publish a science edition, alter infrastructure, change account settings, revise manuscripts, or claim a running autonomous system.
+
 ## 2026.10.28 revision 2 — Capability map and local job preflight
 
 At the Operator's request to explain and incorporate the engine's abilities and expansion paths:

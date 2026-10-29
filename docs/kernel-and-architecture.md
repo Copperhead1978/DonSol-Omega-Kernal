@@ -48,6 +48,8 @@ The current boot names filters, not characters or autonomous processes. Expanded
 | FIELDSMITH | Systems/emergence, observer outside the system | Full entry [FILL] |
 | BRIDGENODE | Structural analogy across domains | Full entry [FILL] |
 
+**Amendment — 2026-10-29.** The table above is unchanged: it reports the v8.1 source, in which the FIELDSMITH and BRIDGENODE full entries remain [FILL]. By the Operator's ruling of 2026-10-29, the six code-name lenses are confirmed as the roster, and current-edition definitions for FIELDSMITH and BRIDGENODE are supplied by the [lens definitions amendment](lens-definitions-amendment-2026-10-29.md). The amendment defines the current edition only; it does not rewrite the source record.
+
 The August v9.1 field document explicitly had no expanded lens definitions loaded. The October recovered boot still says definitions come from the Operator/artifact. Do not substitute brief profile summaries, name etymology, or a model's intuition for the full definitions and blindspots. In a session without the relevant source, definitions stay UNKNOWN.
 
 ## Work loop

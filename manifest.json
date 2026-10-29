@@ -74,6 +74,12 @@
       "version": "September 4 method with later recorded-media boundary",
       "path": "docs/gauge-master.md",
       "status": "method_contract_exact_fixture_unavailable"
+    },
+    {
+      "id": "lens-definitions-amendment",
+      "version": "2026-10-29",
+      "path": "docs/lens-definitions-amendment-2026-10-29.md",
+      "status": "operator_adopted_current_edition_definitions_fieldsmith_bridgenode_source_fill_preserved"
     }
   ],
   "tag_profiles": {
@@ -158,11 +164,9 @@
     }
   ],
   "open_conflicts": [
-    "C-001",
     "C-002",
     "C-003",
     "C-004",
-    "C-005",
     "C-006",
     "C-007",
     "C-008",

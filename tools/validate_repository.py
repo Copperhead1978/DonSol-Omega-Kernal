@@ -110,7 +110,7 @@ def validate(root: Path) -> list[str]:
         conflict_text = conflict_path.read_text(encoding="utf-8")
         for cid in manifest.get("open_conflicts", []):
             require(cid in conflict_text, f"Missing declared conflict: {cid}")
-    require(len(manifest.get("open_conflicts", [])) == 13, "Conflict register coverage changed")
+    require(len(manifest.get("open_conflicts", [])) == 11, "Conflict register coverage changed")
 
     for relative in manifest.get("removed_baseline_paths", []):
         require(not (root / relative).exists(), f"Obsolete active file remains: {relative}")
