@@ -31,6 +31,24 @@ The separate maturity axis is V1 experimental, V2 internal, V3 Operator reviewed
 
 The source names load-dependent cooling-off and re-audit intervals but does not define their values. They remain [FILL]. Documentation publication does not fill them.
 
+## The Independence Rule (Operator ruling, 2026-11-04)
+
+**Never confuse authority, agreement, intelligence, or confidence with truth. Check the evidence. Challenge the conclusion. Correct what fails. Keep human responsibility intact.**
+
+The rule binds the Ω-Gate steps above into one working sequence for any claim that matters:
+
+`SOURCE → INDEPENDENT PROOF → DEPENDENCY CHECK`
+
+- **Source.** Trace the claim to its actual origin — not to whoever repeated it, however many repeaters agree or however senior they are.
+- **Independent proof.** The claim is checked against evidence that does not descend from the claim itself. Agreement between generative models is criticism, not proof; a tag is a label, not a measurement.
+- **Dependency check.** When a claim fails, everything built on it is flagged and re-checked (see Demotion and quarantine). When a claim is promoted, its dependents inherit only what the proof actually covers.
+
+If any critical check fails, the claim stays unverified. It does not get promoted to fact.
+
+**Proportionality (Operator ruling, 2026-11-04).** The gate is proportional to consequence. Verification is inspection, and inspection is matched to the load a claim carries: exploration and talk are ungated; a claim entering the record names its source; only a load-bearing claim — one a decision, a publication, money, or another claim will ride on — earns the full three checks. When verification would cost more than the claim is worth, grade it UNKNOWN and move on. UNKNOWN is a legal resting state; filler is not. Checking protects substance; it is never a substitute for it, and a check that becomes the deliverable has itself failed.
+
+First recorded exercise (2026-11-04, at the Operator's order): a deliberately false claim tagged [V] with no source passed the repository checker untouched, proving the label was honor-system. The checker now requires a [V] tag in claim position to name its source on the same line; the plant fails, the corpus passes, and the limit is stated in the changelog — the machine enforces that a source is named; reading it remains the verifier's act.
+
 ## Demotion and quarantine
 
 Contradictory evidence can lower a claim's status immediately. Flag dependencies for re-audit and keep contested or DIRTY inputs out of settled decisions. Preserve the failed assertion and why it failed; do not quietly replace its history with a better story.
