@@ -129,6 +129,32 @@ def validate(root: Path) -> list[str]:
                 require(not re.search(r"\+(?:280|764|147)%|\+∞%", text),
                         f"Obsolete numerical performance claim in current text: {relative}")
 
+    # Independence rule (Don, 2026-11-04): in authored documents, a [V] tag in
+    # claim position must name its source on the same line. The v9.1 profile
+    # defines [V] as "verified by a named, traceable source"; before this check
+    # the tag was honor-system. Vocabulary and meta uses (definitions, profile
+    # tables, rulings about the tag) are exempt by position and wording. This
+    # enforces that a source is NAMED; whether the source supports the claim
+    # remains the L4 verification act.
+    source_token = re.compile(r"(§|https?://|10\.\d{4,}/|\bsource\b|v\d+\.\d+|instructions|C-\d{3})", re.IGNORECASE)
+    for path in root.rglob("*"):
+        if not path.is_file() or path.suffix not in {".md", ".txt"}:
+            continue
+        relative = path.relative_to(root)
+        if any(part in {".git", "sources", "instructions", "__pycache__"} for part in relative.parts):
+            continue
+        for lineno, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+            if "[V]" not in line:
+                continue
+            stripped = line.strip()
+            claim_position = re.match(r"^(?:[-*]|\d+\.)?\s*\**\[V\]", stripped) or re.search(r"\[V\]\.?\s*$", stripped)
+            if not claim_position:
+                continue
+            if re.search(r"defin|means\b", line, re.IGNORECASE):
+                continue
+            require(bool(source_token.search(line)),
+                    f"[V] claim without a named source: {relative}:{lineno}")
+
     # Historical source exports may contain old reference syntax and context.
     # Validate local links in authored current documents without rewriting sources.
     for path in root.rglob("*.md"):
