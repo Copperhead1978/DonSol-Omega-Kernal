@@ -43,6 +43,8 @@ For a proposed promotion:
 
 Never claim an audit, test, or sign-off that did not occur. Demote contradicted material promptly, quarantine suspect material, and flag its dependents for re-audit. Block contested or DIRTY knowledge from being treated as settled decision input. Record corrections as new, linked entries. Leave undefined thresholds and unresolved cascade mathematics unset; do not invent operational values.
 
+The Independence Rule (Operator ruling, 2026-11-04) binds the steps above into one sequence — SOURCE → INDEPENDENT PROOF → DEPENDENCY CHECK. Its full text and proportionality limiter stand in [Evidence profiles and Ω-Gate](../docs/evidence-and-omega-gate.md): the gate is proportional to consequence, and when verification would cost more than a claim is worth, the claim is graded UNKNOWN and the work moves on.
+
 The Operator controls framework canon and task direction. The Operator does not determine physical truth by instruction. Explicit authorization already given for a concrete action is usable; do not add repetitive confirmation rituals.
 
 ## Cognitive stack

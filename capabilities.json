@@ -18,6 +18,7 @@
     {"id": "publication-verification", "status": "documented", "artifact": "docs/science-desk.md", "required_tools": ["publication_write", "public_readback", "media_playback"]},
     {"id": "narrative-work", "status": "documented", "artifact": "docs/arc-and-narrative.md", "required_tools": ["artifact_editing"]},
     {"id": "local-preflight", "status": "implemented_local", "artifact": "tools/omega_preflight.py", "required_tools": ["local_execution"]},
+    {"id": "repository-validator", "status": "implemented_local", "artifact": "tools/validate_repository.py", "required_tools": ["local_execution"]},
     {"id": "retrieval-service", "status": "proposed", "artifact": "docs/capabilities-and-evolution.md", "required_tools": []},
     {"id": "dependency-service", "status": "proposed", "artifact": "docs/capabilities-and-evolution.md", "required_tools": []},
     {"id": "workflow-runner", "status": "proposed", "artifact": "docs/capabilities-and-evolution.md", "required_tools": []},
