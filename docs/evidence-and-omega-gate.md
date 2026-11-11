@@ -18,6 +18,8 @@ These are incompatible vocabularies in places, not a single ladder. In particula
 
 T0 undefined; T1 observed; T2 logical inference; T3 working hypothesis; T4 speculation/narrative; T5 noise/unsupported. These codes are **not a numeric confidence score**. The recovered inequality for dependency inheritance is unresolved against the source's own ordering. No executable cascade arithmetic is supplied in this edition.
 
+**Current-profile reading (Operator ruling 2026-10-29, conflict register C-003 in `docs/versions-and-conflicts.md`):** the T5 inversion in the v8.1 line above is INTENTIONAL — in the current profile T5 is the top grade. The v8.1 ordering is preserved here as source; the numeric inheritance inequality and the DIRTY propagation direction were not ruled on and remain open, and no executable rule is supplied for them.
+
 The separate maturity axis is V1 experimental, V2 internal, V3 Operator reviewed, V4 canonical, V5 archived, V6 deprecated. A V4 narrative can still be T4; canonical-as-literature does not make it experimental evidence. Bare [V] is also not V4 or a V-Series lifecycle entry.
 
 ## Ω-Gate
