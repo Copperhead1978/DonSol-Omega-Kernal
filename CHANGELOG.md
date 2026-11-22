@@ -1,58 +1,31 @@
 # Changelog
 
+
 ## 2026-11-11 — Documentation consistency patch (no edition change)
+
 
 Four wording alignments, documentation only; the repository edition and revision labels (2026.10.28, revision 2) are unchanged, and no source export was altered.
 
+
 - **Publication status.** The 2026-11-04 entry below no longer reads "working copy; not yet published": that change is on main (PR #6, merge 7e5057a), and its heading and closing sentence now say so.
 - **T5 wording.** `docs/evidence-and-omega-gate.md` now states beside the v8.1 T-series line that the T5 inversion is intentional under the Operator's 2026-10-29 ruling (register C-003) — T5 is the top grade in the current profile — while the inheritance inequality and DIRTY propagation elements remain open.
-- **Boot reference.** The full boot names the Independence Rule and points to its full text and proportionality limiter in `docs/evidence-and-omega-gate.md`; the compact boot labels its gate with the rule's name (at 3,999 of its 4,000 characters, the compact has no room for the limiter sentence, which the full boot carries).
+- **Boot reference.** The full boot names the Independence Rule and points to its full text and proportionality limiter in `docs/evidence-and-omega-gate.md`; the compact boot labels its gate with the rule's name (at 3,971 of its 4,000 characters, the compact has no room for the limiter sentence, which the full boot carries).
 - **Validator registration.** `capabilities.json` now registers the repository validator (`tools/validate_repository.py`) as implemented_local, matching `docs/capabilities-and-evolution.md`, which already listed it as implemented.
+
 
 Verified locally after the change: `tools/validate_repository.py` PASS, and the preflight suite passes 15/15. Stronger source checking (whether a named source actually supports a claim) is unchanged by this patch and remains a separate, tested change for a later date.
 
+
 ## 2026-11-04 — Independence Rule adopted as standing law; checker strengthened (published to main 2026-11-04 — PR #6, merge 7e5057a)
+
 
 The Operator adopted the Independence Rule as standing law on 2026-11-04; it is recorded in `docs/evidence-and-omega-gate.md` beside the Ω-Gate it binds. At the Operator's order the same day ("test our existing TruthGate with a deliberately false claim"), a plant test was run against a scratch copy of this repository: a false claim ("Letters and Papers from Prison was first published in 1945") tagged [V] with no source passed the checker untouched — the checker validated the tag vocabulary and the profile definition, never the claim's evidence. `tools/validate_repository.py` now enforces the profile's own definition: in authored documents (source exports and instruction/vocabulary files excluded), a [V] tag in claim position must name its source on the same line (a section reference, versioned artifact, URL, DOI, register ID, or the word "source"). Vocabulary and meta uses are exempt by position and wording. Verified after the change: the plant FAILS with "[V] claim without a named source"; the unmodified corpus still PASSes with zero false positives; the preflight suite remains 15/15. Scope is unchanged and stated plainly: the checker now enforces that a source is NAMED — whether the named source supports the claim remains the L4 verification act, not a machine judgment. The repository edition and revision labels are unchanged; this change was published to the public repository on 2026-11-04 through the Operator's signed-in session, as with prior writes (PR #6, merge 7e5057a). The same morning, at the Operator's further ruling, the rule gained its proportionality limiter (recorded in the same section of `docs/evidence-and-omega-gate.md`): the gate is proportional to consequence, and when verification would cost more than a claim is worth the claim is graded UNKNOWN and the work moves on — checking protects substance and is never the deliverable.
 
+
 ## 2026-10-29 — Operator rulings recorded; lens definitions amendment; full license text
+
 
 At the Operator's ruling on 2026-10-29, following an independent audit of this edition. The repository edition and revision labels (2026.10.28, revision 2) are unchanged; this entry records governance decisions and documentation repairs within that edition.
 
-- **Precedence ratified.** The Operator ratified the conflict register's precedence rule: the v9.1 compilation governs current operating behavior, with the v8.1 master specification as its source. The ratification is recorded in `docs/versions-and-conflicts.md`.
-- **Rulings recorded in the conflict register.** [V] is kept in the current profile as "verified by a named, traceable source" (C-001 closed as a decision). The T5 inversion is confirmed intentional — T5 is the top grade (that element of C-003 decided; the numeric inheritance inequality and DIRTY propagation elements of C-003 were not ruled on and remain open). The six code-name lenses are confirmed as the roster (C-005 closed as a roster decision). The [H]/[U] fold is confirmed — [P] carries hypothesis and UNKNOWN carries unknown in the framework profile, while the Science Desk profile retains [H]/[U] — and is registered as C-014, decided at registration. The manifest's open-conflict list and the repository checker's register-coverage count are updated to match (11 open entries).
-- **Lens definitions amendment added.** `docs/lens-definitions-amendment-2026-10-29.md` supplies the adopted current-edition definitions for FIELDSMITH and BRIDGENODE and is registered as a manifest component and linked from `docs/kernel-and-architecture.md`. The v8.1 source entries remain [FILL]; no source export was altered.
-- **License completed.** `LICENSE.md` now carries the full Creative Commons Attribution–NonCommercial 4.0 International legal text under the existing attribution header, replacing the summary notice, so the license is machine-readable.
-- **Wording repair.** The Science Desk row of the tag-profile table in `docs/evidence-and-omega-gate.md` now states the [P]/[F] cells plainly ("Not used — hypothesis is [H]"; "Not used — unknown is [U]"). No meaning changed.
 
-This entry changes project documentation and records the Operator's governance rulings. It does not publish a science edition, alter infrastructure, change account settings, revise manuscripts, or claim a running autonomous system.
-
-## 2026.10.28 revision 2 — Capability map and local job preflight
-
-At the Operator's request to explain and incorporate the engine's abilities and expansion paths:
-
-- Added a machine-readable register distinguishing documented methods, supplied local code and proposed services. Session tool availability remains an actual observation, not a registry promise.
-- Added a standard-library local job-packet inspector and behavior tests covering tool prerequisites, target-bound authorization records, decision ancestry, unsettled inputs and malformed records. It runs no job and authenticates neither sources nor permissions.
-- Added an explicitly unexecuted planning example and a detailed abilities, connections and controlled-evolution guide, with acceptance conditions for future retrieval, dependency, workflow, broker, evaluation and interface builds.
-- Incorporated capability discovery and bounded propose/build/test/adopt steps into the full and compact boots. Kept current v9.1/component identities and original source exports unchanged.
-- Recorded the source and limits of this newly authored amendment. Earlier prototype reports remain unverified retrieval leads; no complete runtime or empirical model-performance result is claimed.
-
-## 2026.10.28 — Current instruction mirror and repository replacement
-
-Replaces the active November 2025 v1.1 materials with the current DonSol Ω-Kernel / Metadon Cathedral instruction collection at the Operator's request.
-
-- Rebuilt the README, contributor instructions, operating guide, and component/version register.
-- Added current v9.1 full, compact, and light boot compilations. The compact boot has a 4,000-character ceiling; it is not a newly ratified Cathedral v9.2.
-- Mirrored the complete recovered v8.1 technical source, Ignition Key v1.0, July v9.0 boot bundle, and extracted text of all four pages of the August v9.1 field document.
-- Recorded Ω-Kernel v2.2 LOCKFRAME identity without claiming an unavailable standalone implementation.
-- Added Ω-Gate/evidence discipline, procedural amplifier summary, Science Desk method with October overrides, Gauge Master preservation rules, Arc narrative boundary, and a blank handoff template.
-- Preserved conflicting tag meanings, T5/inheritance questions, partial lens definitions, missing source coverage, and other pending rulings in an explicit conflict register.
-- Added a component/source manifest and a local integrity checker. Checks verify document properties, not model performance.
-- Removed old mock benchmark scripts/reports, obsolete PDFs/MHTML, promotional pitch materials, broken benchmark instructions, and unsupported performance-validation claims from the active tree.
-- Continued the existing CC BY-NC 4.0 license and retained the repository URL. The earlier revision remains in Git history; the active tree is replaced without rewriting history.
-
-This release changes project documentation and instructions. It does not publish a science edition, alter infrastructure, change account settings, revise manuscripts, or claim a running autonomous system.
-
-## Historical baseline
-
-The previous head was `731d670fab22e5d839dc35a1bb1e52c004dd4e88` (2025-11-08). Its former v1.1 benchmark-validation designation is historical and is not carried forward as a verified result.
+- **Precedence ratified.** The Operator ratified the conflict register's precedence rule: the v9.1 compilation governs c
