@@ -80,6 +80,18 @@
       "version": "2026-10-29",
       "path": "docs/lens-definitions-amendment-2026-10-29.md",
       "status": "operator_adopted_current_edition_definitions_fieldsmith_bridgenode_source_fill_preserved"
+    },
+    {
+      "id": "j58-operating-lenses-proposal",
+      "version": "2026-11-22 draft 2",
+      "path": "advanced-ai-edition/07-j58-operating-lenses.md",
+      "status": "proposed_shared_specification_not_adopted_or_implemented"
+    },
+    {
+      "id": "great-thinker-reference-catalog-proposal",
+      "version": "2026-11-22 draft 2",
+      "path": "advanced-ai-edition/08-reference-author-catalog.md",
+      "status": "proposed_expandable_author_catalog_with_source_scope_not_adopted"
     }
   ],
   "tag_profiles": {
