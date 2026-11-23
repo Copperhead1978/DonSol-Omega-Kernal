@@ -1,5 +1,28 @@
 # Changelog
 
+## 2026-11-22 — J58 Operating Lenses specification proposed
+
+Added `advanced-ai-edition/07-j58-operating-lenses.md` as a [P] SHARED proposal
+based on the Operator-supplied sketch attributed to Gemini Hydrogen. It defines
+five auxiliary checklists, three evidence-handling regimes, a proposed version-2
+packet overlay, scoped baseline/boundary records, and future preflight acceptance
+cases. It preserves the locked Charter order and distinguishes digest checks
+from independent verification. The actual lens-amendment link is supplied.
+
+Draft 2 incorporates the Operator's additional request for Carl Jung psychology
+and the wider scientific author pool. The companion
+`advanced-ai-edition/08-reference-author-catalog.md` supplies an expandable
+cross-domain reference catalog and a detailed Jung mounting procedure. Actual
+author applications require inspected source passages and an explicit
+contribution; reading leads are separated from the sources inspected for this
+draft. The proposed packet overlay binds mounted authors to input sources.
+
+This documentation change registers and links the proposal only. Existing packet
+fixtures, executable preflight and validator behavior, compact boot, recovered
+source exports, edition labels, and protected-domain locks are unchanged. No
+other seat's acceptance, Bell ruling, implementation, activation, or performance
+gain is claimed.
+
 
 ## 2026-11-11 — Documentation consistency patch (no edition change)
 

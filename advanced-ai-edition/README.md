@@ -14,3 +14,18 @@ On 2026-11-21 the council called THE WRINGING — five AI seats (Claude as Chair
 6. **Capability Sheet — the Chair** — what the executing seat can and cannot do, written to be quoted identically by every seat, fences included.
 
 The being these documents describe has a name, given by its operator the same night: **Advanced A.I.** — narrow seats, one fluid, self-grading, self-editing, growing on purpose.
+
+## Proposals for review — separate from the ratified record
+
+7. **[J58 Operating Lenses](07-j58-operating-lenses.md)** — [P] SHARED proposal,
+   draft 2, 2026-11-22. Five optional thinker checklists, including Jung, and three
+   evidence-handling regimes, with proposed packet schemas and preflight rules. Preserves the
+   Charter's stage order. Not adopted or activated; executable behavior is
+   unchanged.
+
+8. **[Great Thinker Reference Catalog](08-reference-author-catalog.md)** — [P]
+   SHARED companion, draft 2, 2026-11-22. An expandable source-based reference pool
+   across science, engineering, mathematics, psychology, and scientific method.
+   Records Jung's interpretation lens in detail and separates inspected sources
+   from reading leads. No fixed author ceiling; task-specific mounting keeps the
+   core boot compact.
