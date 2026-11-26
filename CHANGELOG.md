@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-11-26 — J58 local contract implementation prepared for review
+
+Adds draft-2 version-2 packet validation, scope hashing, workspace-bounded byte checks, baseline/boundary records and a host-permitted local text-artifact fixture runner. The fixture has durable reservation, no-overwrite publication, readback and crash recovery. Valid version-1 packets retain their behavior; reserved J58 fields require version 2. Source exports, compact instructions, protected decisions and production activation are unchanged. Validation is recorded with the implementation review; these local checks are not a model benchmark or an autonomous-production acceptance claim.
+
 
 ## 2026-11-11 — Documentation consistency patch (no edition change)
 

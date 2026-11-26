@@ -25,6 +25,8 @@ python3 -m unittest discover -s tools -p 'test_*.py'
 
 The example returns `PLAN_ONLY`. Preflight checks record consistency and missing prerequisites; it performs no action, authenticates no authority, and proves no source true. Both local tools use Python 3.10 or later and require no third-party packages.
 
+The [J58 local implementation](docs/j58-local-implementation.md) adds schema-version-2 evidence and byte checks, with an explicit workspace boundary and a separate opt-in local artifact fixture runner. It does not activate production or authenticate owner authority. Valid legacy packets keep their existing behavior; version-1 packets carrying reserved J58 fields hold.
+
 ## The system
 
 | Component | Current recovered identity | Purpose |
