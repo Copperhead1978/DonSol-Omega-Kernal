@@ -51,6 +51,17 @@ def validate(root: Path) -> list[str]:
         require(bool(component.get("version")), f"Missing version: {component.get('id')}")
         checked_path(component.get("path", ""))
 
+    implementation = manifest.get("implementation_artifacts", [])
+    require(isinstance(implementation, list), "Invalid implementation artifact list")
+    if isinstance(implementation, list):
+        require(len({item.get("path") for item in implementation}) == len(implementation), "Duplicate implementation artifact")
+        for item in implementation:
+            path = checked_path(item.get("path", ""))
+            if path:
+                data = path.read_bytes()
+                require(hashlib.sha256(data).hexdigest() == item.get("sha256"), f"Implementation hash changed: {item['path']}")
+                require(len(data) == item.get("size_bytes"), f"Implementation size changed: {item['path']}")
+
     capability_path = checked_path(manifest.get("capability_register", ""))
     if capability_path:
         try:

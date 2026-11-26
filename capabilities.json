@@ -24,6 +24,7 @@
     {"id": "workflow-runner", "status": "proposed", "artifact": "docs/capabilities-and-evolution.md", "required_tools": []},
     {"id": "runtime-broker", "status": "proposed", "artifact": "docs/capabilities-and-evolution.md", "required_tools": []},
     {"id": "evaluation-harness", "status": "proposed", "artifact": "docs/evaluation.md", "required_tools": []},
-    {"id": "operator-interface", "status": "proposed", "artifact": "docs/capabilities-and-evolution.md", "required_tools": []}
+    {"id": "operator-interface", "status": "proposed", "artifact": "docs/capabilities-and-evolution.md", "required_tools": []},
+    {"id": "local-artifact-fixture", "status": "implemented_local", "artifact": "tools/j58_runner.py", "required_tools": ["local_execution"], "scope": "Host-permitted local text artifact fixture only; no production tool or authority service."}
   ]
 }

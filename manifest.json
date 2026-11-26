@@ -53,7 +53,7 @@
     },
     {
       "id": "local-preflight",
-      "version": "1.0",
+      "version": "2.0 (v1/v2 packets)",
       "path": "tools/omega_preflight.py",
       "status": "local_record_inspector_not_executor_or_authentication"
     },
@@ -80,6 +80,18 @@
       "version": "2026-10-29",
       "path": "docs/lens-definitions-amendment-2026-10-29.md",
       "status": "operator_adopted_current_edition_definitions_fieldsmith_bridgenode_source_fill_preserved"
+    },
+    {
+      "id": "j58-local-contract",
+      "version": "2.0",
+      "path": "tools/j58_preflight.py",
+      "status": "local_byte_and_record_checks_not_source_authentication"
+    },
+    {
+      "id": "local-artifact-fixture",
+      "version": "0.1",
+      "path": "tools/j58_runner.py",
+      "status": "opt_in_local_fixture_not_production_gateway"
     }
   ],
   "tag_profiles": {
@@ -123,7 +135,7 @@
   "coverage": {
     "complete_october_transcript": "not_recovered",
     "runtime_implementation": "not_supplied",
-    "local_preflight": "supplied_limited_to_declared_job_record_checks",
+    "local_preflight": "supplied_v1_base_checks_and_v2_pinned_record_byte_checks",
     "earlier_prototypes": "conversation_reports_not_recovered_as_implementation_artifacts",
     "standalone_ignition_v1_1": "not_recovered",
     "amplifier_laws_exact_wording": "summary_only",
@@ -201,5 +213,42 @@
     "conflict_register",
     "capability_register_consistency"
   ],
-  "performance_validation": "no_empirical_model_comparison_established"
+  "performance_validation": "no_empirical_model_comparison_established",
+  "implementation_artifacts": [
+    {
+      "path": "tools/omega_preflight.py",
+      "sha256": "c2a4962b4ea2a05b3195bd63e0706adf444881df98939fc771d602747ed028c7",
+      "size_bytes": 9991
+    },
+    {
+      "path": "tools/j58_preflight.py",
+      "sha256": "6342e03235331a39dc625f83f7b839e52a0f7ea76fbb6e1854e37dae19c6e7b0",
+      "size_bytes": 13183
+    },
+    {
+      "path": "tools/j58_runner.py",
+      "sha256": "b8b101110d53146f4484d5c53eae3998c95a38b65007c7cdb6762635d9ed1464",
+      "size_bytes": 9119
+    },
+    {
+      "path": "tools/test_j58_preflight.py",
+      "sha256": "f85ea37ef677cc9fafece210f3087932fab67427e77b81d6defdbd14b6b71129",
+      "size_bytes": 13397
+    },
+    {
+      "path": "tools/test_j58_runner.py",
+      "sha256": "f52e4c36e9bb9492b56c5d31900332eceb0ddd0944ba193bec051ab69e073a7f",
+      "size_bytes": 7418
+    },
+    {
+      "path": "examples/job-packet-v2.json",
+      "sha256": "abe7d3cf6a78ee663eb7bb2217cf737eded594abb98081f49695b83a7c8a518d",
+      "size_bytes": 1259
+    },
+    {
+      "path": "docs/j58-local-implementation.md",
+      "sha256": "3f35cadde0e4f56a0371fac063b747909ad8ce61f1e6ab2e87c55782dfc984b5",
+      "size_bytes": 4793
+    }
+  ]
 }

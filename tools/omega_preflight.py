@@ -9,7 +9,7 @@ from datetime import datetime
 from pathlib import Path
 
 
-def assess(packet: object, registry: object) -> dict:
+def _assess_v1(packet: object, registry: object) -> dict:
     blockers: list[str] = []
     warnings: list[str] = []
 
@@ -166,14 +166,34 @@ def assess(packet: object, registry: object) -> dict:
     return finish()
 
 
+def assess(packet: object, registry: object, workspace_root: Path | None = None) -> dict:
+    """Keep legacy checks; v2 adds bounded byte/record checks, never authority."""
+    if __package__:
+        from .j58_preflight import assess_v2
+    else:
+        from j58_preflight import assess_v2
+    if isinstance(packet, dict) and type(packet.get("schema_version")) is int and packet["schema_version"] == 2:
+        return assess_v2(packet, registry, _assess_v1, workspace_root)
+    result = _assess_v1(packet, registry)
+    if isinstance(packet, dict) and packet.get("schema_version") == 1 and any(k in packet for k in ("FLIGHT_REGIME", "j58")):
+        result["blockers"].append("Reserved J58 extension fields require packet schema version 2.")
+        result["status"] = "HOLD"
+    return result
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("packet", type=Path)
+    parser.add_argument("--workspace-root", type=Path, help="Explicit file-reference boundary, required for v2")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     try:
-        result = assess(json.loads(args.packet.read_text(encoding="utf-8")),
-                        json.loads((root / "capabilities.json").read_text(encoding="utf-8")))
+        if __package__:
+            from .j58_preflight import load_json
+        else:
+            from j58_preflight import load_json
+        result = assess(load_json(args.packet.read_bytes()),
+                        load_json((root / "capabilities.json").read_bytes()), args.workspace_root)
     except (OSError, ValueError, RecursionError) as exc:
         print(json.dumps({"status": "HOLD", "blockers": [f"Cannot inspect packet: {exc}"]}, indent=2))
         return 1
